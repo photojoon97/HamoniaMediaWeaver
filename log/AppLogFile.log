@@ -1,8 +1,15 @@
-[2018-07-04T16:48:07.218] [INFO] normal - HTTP to HTTPS redirect app launched.
-[2018-07-04T16:48:07.222] [INFO] normal - ------------------------------ domainURL : https://localhost:443/
-[2018-07-04T16:48:07.222] [INFO] normal - socket.io is listening at:
-[2018-07-04T16:48:07.223] [INFO] normal - [31m%s[0m 	https://localhost:443/
-[2018-07-04T16:48:07.223] [INFO] normal - Your web-browser (HTML file) MUST set this line:
-[2018-07-04T16:48:07.223] [INFO] normal - [31m%s[0m connection.socketURL = "https://localhost:443/";
-[2018-07-04T16:48:07.223] [INFO] normal - ------------------------------
-[2018-07-04T16:48:13.401] [INFO] normal - changed-uuid is :: {"userid":"43edl3l862c","roomNm":"ㅈ"}
+[2021-02-08T13:11:27.952] [DEBUG] application - debug
+[2021-02-08T13:11:27.954] [INFO] application - info
+[2021-02-08T13:11:27.955] [ERROR] application - error
+[2021-02-08T13:11:27.955] [FATAL] application - fatal
+[2021-02-08T13:11:28.255] [DEBUG] signaling - debug
+[2021-02-08T13:11:28.255] [INFO] signaling - info
+[2021-02-08T13:11:28.255] [ERROR] signaling - error
+[2021-02-08T13:11:28.255] [FATAL] signaling - fatal
+[2021-02-08T13:11:28.301] [INFO] normal - HTTP to HTTPS redirect app launched.
+[2021-02-08T13:11:28.301] [INFO] normal - ------------------------------ domainURL : https://localhost:443/
+[2021-02-08T13:11:28.302] [INFO] normal - socket.io is listening at:
+[2021-02-08T13:11:28.302] [INFO] normal - [31m%s[0m 	https://localhost:443/
+[2021-02-08T13:11:28.302] [INFO] normal - Your web-browser (HTML file) MUST set this line:
+[2021-02-08T13:11:28.302] [INFO] normal - [31m%s[0m connection.socketURL = "https://localhost:443/";
+[2021-02-08T13:11:28.302] [INFO] normal - ------------------------------

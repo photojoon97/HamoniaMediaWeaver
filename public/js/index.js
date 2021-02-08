@@ -32,8 +32,14 @@ $(document).ready(function(){
 	
 	
 	// 로그인 버튼
-	$('.bottom_right').on('click', '#openLoginDiv', function(){
-		loginUISet();
+	//$('.bottom_right').on('click', '#openLoginDiv', function(){
+	//	loginUISet();
+	//});
+	// 로그인 버튼
+	$('#opneLoginDiv').click(function(){
+		//loginUISet();
+		opneLogin();
+
 	});
 	
 	// 비회원 버튼
@@ -42,10 +48,13 @@ $(document).ready(function(){
 	});
 	
 	// 회원가입 버튼
-	$('.bottom_right').on('click', '#openSignupDiv', function(){
-		signupUISet();
+	//$('.bottom_right').on('click', '#openSignupDiv', function(){
+	//	signupUISet();
+	//});
+	// 회원가입 버튼
+	$('#openSingupDiv').click(function(){
+		openSignup();
 	});
-	
 	
 	// SNS icon button
 	$('.bottom_right').on('click', '.btn-login img', function(){
@@ -162,4 +171,33 @@ function openOrJoinRoomFnt(){
 	}
 	
 	location.href='https://' + location.host + '/' + $('#room-id').val().replace(/^\s+|\s+$/g, '');
+}
+
+function opneLogin(){
+	//로그인 화면 불러오기
+	//parent-box 영역 삭제
+	var arr = [];
+
+	arr[0] = document.querySelector('.box2');
+	arr[1] = document.querySelector('.box3');
+	arr[2] = document.querySelector('.box4');
+
+	for(var i = 0; i < 3; i++){
+		arr[i].parentNode.removeChild(arr[i]);
+	}
+	//ajax로 html 불러오기
+	//login.html 불러오기
+	$.get("/../html/login.html", function(data){
+		$(".parent-box").append($(data));
+	});
+
+}
+
+function openSignup(){
+	//회원가입 화면 불러오기
+	$(".parent-box").html("");
+	$.get("/../html/signup.html", function(data){
+		$(".parent-box").append($(data));
+	});
+
 }

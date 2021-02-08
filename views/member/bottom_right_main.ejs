@@ -1,32 +1,38 @@
 
 
 <!-- UI 변경시 padding-top 제거 -->
-<div class="box3" style="padding-top: 40px;">
-	<h4 style="font-weight:  bold;">바로 접속/참여 하기</h4>
-	<p style="font-size: .8rem;">방이름을 입력하여 개설 또는 참여하세요</p>
-</div>
-
-<div class="box2" style="display: none;">
-	<p id="brmMsg">&nbsp;</p>
-</div>
-
-<!-- UI 변경시 margin-bottom 제거 -->
-<div class="box4">
-	<% if (isLogin){ %>
-	    	<input type="hidden" id="userName" value="<%= nickname %>" class="form-control" name="userName" required autocomplete="off" style="border: 0; font-weight: bold; text-align: center;" readonly>
-		<input type="text" id="" value="" class="" name="" autocomplete="off" style="border: 0; font-weight: bold; text-align: center;" readonly>
-		<input type="text" id="room-id" class="form-control" placeholder="방이름을 입력하세요." autocorrect=off autocapitalize=off size=20>
-	<% }else{ %>
-    		<input type="text" id="userName" class="form-control" name="userName" required placeholder="대화명을 입력하세요." autocomplete="off" style="display: none;">
-		<input type="text" id="room-id" class="form-control" placeholder="방이름을 입력하세요." autocorrect=off autocapitalize=off size=20 style="margin-top: 27px;">
-	<% } %>
+<div class="parent-box"> 
+	<div class="box3">
+		<div class=box3-1 >
+			<button id="opneLoginDiv" class="btn">로그인</button>
+			<button id= "openSingupDiv"class="btn">회원가입</button>
+		</div>
+		<h4 style="font-weight:  bold;">바로 접속/참여 하기</h4>
+		<p style="font-size: .8rem;">방이름을 입력하여 개설 또는 참여하세요</p>
+	</div>
 	
-</div>
+	
+	<div class="box2" style="display: none;">
+		<p id="brmMsg">&nbsp;</p>
+	</div>
+	
+	<!-- UI 변경시 margin-bottom 제거 -->
+	<div class="box4">
+		<% if (isLogin){ %>
+				<input type="hidden" id="userName" value="<%= nickname %>" class="form-control" name="userName" required autocomplete="off" style="border: 0; font-weight: bold; text-align: center;" readonly>
+			<input type="text" id="" value="" class="" name="" autocomplete="off" style="border: 0; font-weight: bold; text-align: center;" readonly>
+			<input type="text" id="room-id" class="form-control" placeholder="방이름을 입력하세요." autocorrect=off autocapitalize=off size=20>
+		<% }else{ %>
+				<input type="text" id="userName" class="form-control" name="userName" required placeholder="대화명을 입력하세요." autocomplete="off" style="display: none;">
+			<input type="text" id="room-id" class="form-control" placeholder="방이름을 입력하세요." autocorrect=off autocapitalize=off size=20 style="margin-top: 27px;">
+		<% } %>
+		
+	</div>
 
-<div class="row joinBtn">
-	<button id="open-or-join-room" class="btn btn-primary btn-block">접속 또는 참여하기</button>
+	<div class="row joinBtn">
+		<button id="open-or-join-room" class="btn btn-primary btn-block">접속 또는 참여하기</button>
+	</div>
 </div>
-
 
 <script>
 $('#room-id').focus();
